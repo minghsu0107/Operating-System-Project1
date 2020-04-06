@@ -1,4 +1,8 @@
-CFLAG = -DDEBUG -std=c99
+CFLAG = -std=c99
+
+ifdef DEBUG
+CFLAG += -DDEBUG -g
+endif
 
 main: main.o scheduler.o process.o
 	gcc $(CFLAG) main.o scheduler.o process.o -o main
@@ -11,3 +15,4 @@ scheduler.o: scheduler.c scheduler.h
 
 clean:
 	rm -rf main *o
+
