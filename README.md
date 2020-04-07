@@ -22,7 +22,7 @@ Nn Rn Tn
 //Ri - a non-negative integer, specifying the ready time of the i-th process.
 //Ti - a non-negative integer, specifying the execution time of the i-th process.
 ```
-### Program output
+### Program Output
 ```
 TAG PID ST FT
 //TAG - the tag to identify the message of this project.
