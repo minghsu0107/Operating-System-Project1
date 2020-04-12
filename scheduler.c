@@ -102,6 +102,8 @@ int scheduling(struct process *proc, int nproc, int policy) {
 			//kill(running, SIGKILL);
 			waitpid(proc[running].pid, NULL, 0);
 			printf("%s %d\n", proc[running].name, proc[running].pid);
+			fflush(stdout);
+			
 			running = -1;
 			finish_cnt++;
 
