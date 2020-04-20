@@ -3,7 +3,7 @@
 #include <linux/timekeeping.h>
 #include <linux/linkage.h>
 
-asmlinkage int sys_my_time(unsigned long *sec, unsigned long *nsec) {
+asmlinkage int sys_get_time(unsigned long *sec, unsigned long *nsec) {
     struct timespec t;
     getnstimeofday(&t);
 
